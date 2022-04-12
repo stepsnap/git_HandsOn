@@ -22,6 +22,7 @@ if re.search('^[ACGTU]+$', args.seq):
         print ('The sequence can be DNA or RNA')
 else:
     print ('The sequence is not a nucleic acids')
+<<<<<<< HEAD
 
 if args.motif:
     args.motif = args.motif.upper()
@@ -30,3 +31,5 @@ if args.motif:
         print("FOUND")
     else:
         print("NOT FOUND")
+=======
+>>>>>>> motif
