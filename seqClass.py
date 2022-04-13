@@ -30,7 +30,7 @@ else:
 
 if args.motif:
     args.motif = args.motif.upper() #converte the motif in upper case
-    print(f'Motif search enabled: looking for motif "{args.motif}" in sequence "{args.seq}"... ', end = '') #to find simple motifs in the sequence, besides printing the type of molecule (DNA or RNA)
+    print(f'Motif search enabled: looking for motif in sequence') #to find simple motifs in the sequence, besides printing the type of molecule (DNA or RNA)
     if re.search(args.motif, args.seq):
         print("FOUND")
     else:
