@@ -27,7 +27,6 @@ if re.search('^[ACGTU]+$', args.seq): #search in the sequence the pattern within
         print ('The sequence can be DNA or RNA') #if it finds T and  U in the sequence return a message that the sequence can be DNA or RNA 
 else:
     print ('The sequence is not DNA') #else the sequence is not DNA
-<<<<<<< HEAD
 
 if args.motif:
     args.motif = args.motif.upper() #converte the motif in upper case
@@ -36,5 +35,4 @@ if args.motif:
         print("FOUND")
     else:
         print("NOT FOUND")
-=======
->>>>>>> motif
+
