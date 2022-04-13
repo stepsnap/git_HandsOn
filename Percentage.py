@@ -20,10 +20,10 @@ if re.search('^[ACGTU]+$', args.seq):
     percent_T=float(float(T*100)/float(len(args.seq)))
     percent_G=float(float(G*100)/float(len(args.seq)))
     print ("% of U in sequence:", percent_U, "%")#Print the U Percentage
-    print ("% of A in sequence:", percent_A, "%")#Print the U Percentage
-    print ("% of C in sequence:", percent_C, "%")#Print the U Percentage
-    print ("% of T in sequence:", percent_T, "%")#Print the U Percentage
-    print ("% of G in sequence:", percent_G, "%")#Print the U Percentage
+    print ("% of A in sequence:", percent_A, "%")#Print the A Percentage
+    print ("% of C in sequence:", percent_C, "%")#Print the C Percentage
+    print ("% of T in sequence:", percent_T, "%")#Print the T Percentage
+    print ("% of G in sequence:", percent_G, "%")#Print the G Percentage
 else:
     print ('The sequence is not DNA or RNA')
 
