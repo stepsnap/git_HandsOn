@@ -4,24 +4,26 @@ from argparse import ArgumentParser
 parser = ArgumentParser(description = 'Calculate the percentage of each nucleotide in the sequence')
 parser.add_argument("-s", "--seq", type = str, required = True, help = "Input sequence")
 
-if len(sys.argv) == 1:
-    parser.print_help()
-    sys.exit(1)
-
 args = parser.parse_args()
-args.seq = args.seq.upper()
+seq = seq.upper()
 if re.search('^[ACGTU]+$', args.seq):
-    u= args.seq.count("U") #this counts the U Percentage
-    a= args.seq.count("A") #this counts the A Percentage
-    c= args.seq.count("C") #this counts the C Percentage
-    t= args.seq.count("T") #this counts the T Percentage
-    g= args.seq.count("G") #this counts the G Percentage
+    u= seq.count("U") #this counts the U Percentage
+    a= seq.count("A") #this counts the A Percentage
+    c= seq.count("C") #this counts the C Percentage
+    t= seq.count("T") #this counts the T Percentage
+    g= seq.count("G") #this counts the G Percentage
 
-    print ("% of U in sequence is:", (u / len(args.seq)) * 100)#Calulate and Print the U Percentage
-    print ("% of A in sequence is:", (a / len(args.seq)) * 100)#Calculate and Print the A Percentage
-    print ("% of C in sequence is:", (c / len(args.seq)) * 100)#Calculate and Print the C Percentage
-    print ("% of T in sequence is:", (t / len(args.seq)) * 100)#Calculate and Print the T Percentage
-    print ("% of G in sequence is:", (g / len(args.seq)) * 100)#Calculate and Print the G Percentage
+    u_content= (u/len(seq)) * 100 #Calculate the U percentage 
+    a_content= (a/len(seq)) * 100 #Calculate the A percentage
+    c_content= (c/len(seq)) * 100 #Calculate the C percentage
+    t_content= (t/len(seq)) * 100 #Calculate the T percentage
+    g_content= (g/len(seq)) * 100 #Calculate the G percentage
+    
+    print (f"The % of U in sequence is: {u_content}") #Print the U Percentage
+    print (f"The % of A in sequence is: {a_content}") #Print the A Percentage
+    print (f"The % of C in sequence is: {c_content}") #Print the C Percentage
+    print (f"The % of T in sequence is: {t_content}") #Print the T Percentage
+    print (f"The % of G in sequence is: {g_content}") #Print the G Percentage
 
 else:
     print ('The sequence is not DNA or RNA')
